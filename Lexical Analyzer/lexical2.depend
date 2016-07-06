@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1454837435 source:/home/harpratap/Documents/Sem 6/PCD/practicals/Lex Analyzer/lexical2/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<locale>
+
