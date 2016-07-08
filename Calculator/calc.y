@@ -8,7 +8,7 @@ void updateSymbolVal(char symbol, int val);
 %}
 
 %union {int num; char id;}         /* Yacc definitions */
-%start line
+%start line	
 %token print
 %token exit_command
 %token <num> number
@@ -33,6 +33,8 @@ assignment : identifier '=' exp  { updateSymbolVal($1,$3); }
 exp    	: term                  {$$ = $1;}
        	| exp '+' term          {$$ = $1 + $3;}
        	| exp '-' term          {$$ = $1 - $3;}
+       	| exp '*' term 			{$$ = $1 * $3;}
+       	| exp '/' term 			{$$ = $1 / $3;}
        	;
 term   	: number                {$$ = $1;}
 		| identifier			{$$ = symbolVal($1);} 
